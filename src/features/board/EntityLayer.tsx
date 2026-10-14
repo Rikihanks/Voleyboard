@@ -85,24 +85,43 @@ export function EntityLayer({
             )}
             <EntityShape entity={entity} radius={radius} fill={fill} />
             {label && entity.kind === 'player' && (
-              <Text
-                text={label}
-                width={diameter}
-                height={diameter}
-                offsetX={radius}
-                offsetY={radius}
-                align="center"
-                verticalAlign="middle"
-                fontSize={Math.max(8, Math.min(48, diameter * 0.5))}
-                fontStyle="bold"
-                fill="#ffffff"
-                listening={false}
-              />
+              <PlayerLabel text={label} radius={radius} diameter={diameter} />
             )}
           </Group>
         )
       })}
     </>
+  )
+}
+
+/** Etiqueta del jugador debajo de la ficha, centrada y legible con nombres largos. */
+function PlayerLabel({
+  text,
+  radius,
+  diameter,
+}: {
+  text: string
+  radius: number
+  diameter: number
+}) {
+  const fontSize = Math.max(9, Math.min(16, diameter * 0.5))
+  const width = Math.max(diameter * 2, text.length * fontSize * 0.62)
+  return (
+    <Text
+      text={text}
+      x={-width / 2}
+      y={radius + 3}
+      width={width}
+      align="center"
+      fontSize={fontSize}
+      fontStyle="bold"
+      fill="#ffffff"
+      shadowColor="#0b1220"
+      shadowBlur={4}
+      shadowOpacity={0.9}
+      shadowOffsetY={1}
+      listening={false}
+    />
   )
 }
 
