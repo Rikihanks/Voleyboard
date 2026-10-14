@@ -1,0 +1,220 @@
+{
+  "app": {
+    "title": "VoleyBoard",
+    "tagline": "Pizarra táctica de voleibol"
+  },
+  "toolbar": {
+    "groupPieces": "Piezas",
+    "groupTools": "Herramientas",
+    "groupHistory": "Historial",
+    "groupFile": "Archivo",
+    "addPlayer": "Añadir jugador",
+    "addBall": "Añadir balón",
+    "select": "Seleccionar",
+    "pencil": "Lápiz",
+    "line": "Línea",
+    "text": "Texto",
+    "eraser": "Borrador",
+    "undo": "Deshacer",
+    "redo": "Rehacer",
+    "clear": "Limpiar",
+    "exportPng": "Exportar PNG",
+    "exportPdf": "Exportar PDF",
+    "share": "Compartir",
+    "copyLink": "Copiar enlace",
+    "loadTeam": "Cargar equipo",
+    "more": "Más opciones",
+    "settings": "Ajustes"
+  },
+  "views": {
+    "title": "Vista",
+    "full": "Pista completa",
+    "half": "Media pista",
+    "blank": "En blanco"
+  },
+  "settings": {
+    "title": "Ajustes",
+    "close": "Cerrar ajustes",
+    "language": "Idioma",
+    "theme": "Tema",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "rotation": "Rotación",
+    "rotation0": "0°",
+    "rotation90": "90°",
+    "playerScale": "Tamaño de jugadores",
+    "ballScale": "Tamaño de balones",
+    "labelMode": "Etiqueta",
+    "courtTheme": "Tema de pista",
+    "strokeColor": "Color del trazo",
+    "strokeWidth": "Grosor del trazo",
+    "export": "Exportar",
+    "pdfPerFrame": "Una página por fotograma",
+    "keepAwake": "Mantener pantalla encendida"
+  },
+  "labelModes": {
+    "number": "Número",
+    "name": "Nombre",
+    "position": "Posición",
+    "none": "Ninguna"
+  },
+  "themes": {
+    "blue": "Azul",
+    "green": "Verde",
+    "wood": "Madera",
+    "neutral": "Neutro"
+  },
+  "line": {
+    "dashLabel": "Patrón",
+    "shapeLabel": "Forma",
+    "headLabel": "Extremos",
+    "dash": {
+      "solid": "Continua",
+      "dashed": "Discontinua",
+      "dotted": "Punteada",
+      "dashdot": "Punto y raya"
+    },
+    "shape": { "straight": "Recta", "curve": "Curva" },
+    "head": { "none": "Sin punta", "arrow": "Flecha" }
+  },
+  "frames": {
+    "title": "Fotogramas",
+    "add": "Añadir fotograma",
+    "duplicate": "Duplicar fotograma",
+    "delete": "Borrar fotograma",
+    "moveLeft": "Mover a la izquierda",
+    "moveRight": "Mover a la derecha",
+    "copyStrokes": "Copiar trazos",
+    "duration": "Duración (ms)",
+    "previous": "Fotograma anterior",
+    "next": "Fotograma siguiente"
+  },
+  "playback": {
+    "play": "Reproducir",
+    "pause": "Pausar",
+    "stop": "Detener",
+    "speed": "Velocidad",
+    "loop": "Bucle",
+    "ghost": "Fotograma anterior",
+    "frame": "Fotograma"
+  },
+  "rotation": {
+    "title": "Rotación",
+    "system": "Sistema",
+    "rotation": "Rotación",
+    "next": "Siguiente rotación",
+    "receivers": "Receptores",
+    "applyReceive": "Aplicar recepción",
+    "check": "Comprobar posiciones"
+  },
+  "share": {
+    "copied": "Enlace copiado al portapapeles.",
+    "tooLong": "El enlace es demasiado largo; usa el fichero PNG o PDF.",
+    "invalid": "El enlace no es válido."
+  },
+  "board": {
+    "untitled": "Sin título",
+    "players": "Jugadores",
+    "balls": "Balones",
+    "zoom": "Zoom",
+    "zoomIn": "Acercar",
+    "zoomOut": "Alejar",
+    "zoomReset": "Restablecer zoom",
+    "hint": "Arrastra las piezas. Usa dos dedos para zoom y desplazamiento.",
+    "empty": "Añade jugadores o balones para empezar."
+  },
+  "piece": {
+    "label": "Etiqueta",
+    "color": "Color",
+    "remove": "Quitar pieza"
+  },
+  "confirm": {
+    "clearTitle": "Limpiar la pizarra",
+    "clearMessage": "Se quitarán todas las piezas y trazos. Puedes deshacerlo.",
+    "yes": "Limpiar",
+    "no": "Cancelar"
+  },
+  "a11y": {
+    "board": "Pizarra táctica de voleibol",
+    "toolbar": "Barra de herramientas",
+    "selected": "seleccionada"
+  },
+  "pwa": {
+    "updateAvailable": "Hay una versión nueva disponible.",
+    "update": "Actualizar",
+    "later": "Más tarde"
+  },
+  "limits": {
+    "players": "Se alcanzó el máximo de 20 jugadores.",
+    "balls": "Se alcanzó el máximo de 5 balones."
+  },
+  "nav": {
+    "board": "Pizarra",
+    "library": "Biblioteca",
+    "teams": "Equipos"
+  },
+  "mobile": {
+    "drawing": "Dibujo",
+    "animation": "Animación"
+  },
+  "common": {
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "delete": "Eliminar",
+    "save": "Guardar",
+    "close": "Cerrar",
+    "back": "Volver"
+  },
+  "boardTitle": {
+    "label": "Título",
+    "placeholder": "Sin título"
+  },
+  "teams": {
+    "title": "Equipos",
+    "empty": "Todavía no hay equipos.",
+    "new": "Nuevo equipo",
+    "name": "Nombre",
+    "color": "Color",
+    "players": "Jugadores",
+    "addPlayer": "Añadir jugador",
+    "removePlayer": "Quitar jugador",
+    "playerName": "Nombre",
+    "number": "Número",
+    "position": "Posición",
+    "load": "Cargar en la pizarra",
+    "delete": "Eliminar equipo",
+    "duplicate": "Duplicar",
+    "save": "Guardar",
+    "duplicateNumber": "Hay números repetidos en el equipo.",
+    "confirmDelete": "Se eliminará el equipo. Esta acción no se puede deshacer.",
+    "pickTitle": "Cargar equipo",
+    "pickHint": "Elige un equipo para colocar titulares en la rotación y el resto en el banquillo.",
+    "maxPlayers": "Máximo de 20 jugadores."
+  },
+  "library": {
+    "title": "Biblioteca",
+    "empty": "Todavía no hay tácticas guardadas.",
+    "newBoard": "Nueva táctica",
+    "search": "Buscar por título",
+    "sort": "Ordenar",
+    "sortName": "Nombre",
+    "sortDate": "Fecha",
+    "folders": "Carpetas",
+    "newFolder": "Nueva carpeta",
+    "untitled": "Sin título",
+    "rename": "Renombrar",
+    "duplicate": "Duplicar",
+    "delete": "Eliminar",
+    "confirmDelete": "Se eliminará la táctica. Esta acción no se puede deshacer.",
+    "moveTo": "Mover a",
+    "all": "Todas",
+    "root": "Raíz",
+    "folderDepthLimit": "No se pueden anidar más de 3 niveles.",
+    "backupExport": "Exportar copia",
+    "backupImport": "Importar copia",
+    "importTitle": "Importar copia de seguridad",
+    "importSummary": "Se añadirán {{boards}} tácticas, {{teams}} equipos y {{folders}} carpetas ({{renamed}} con id nuevo por conflicto).",
+    "importConfirm": "Importar",
+    "importDone": "Copia importada."
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "app": {
+    "title": "VoleyBoard",
+    "tagline": "Volleyball tactics board"
+  },
+  "toolbar": {
+    "groupPieces": "Pieces",
+    "groupTools": "Tools",
+    "groupHistory": "History",
+    "groupFile": "File",
+    "addPlayer": "Add player",
+    "addBall": "Add ball",
+    "select": "Select",
+    "pencil": "Pencil",
+    "line": "Line",
+    "text": "Text",
+    "eraser": "Eraser",
+    "undo": "Undo",
+    "redo": "Redo",
+    "clear": "Clear",
+    "exportPng": "Export PNG",
+    "exportPdf": "Export PDF",
+    "share": "Share",
+    "copyLink": "Copy link",
+    "loadTeam": "Load team",
+    "more": "More options",
+    "settings": "Settings"
+  },
+  "views": {
+    "title": "View",
+    "full": "Full court",
+    "half": "Half court",
+    "blank": "Blank"
+  },
+  "settings": {
+    "title": "Settings",
+    "close": "Close settings",
+    "language": "Language",
+    "theme": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "rotation": "Rotation",
+    "rotation0": "0°",
+    "rotation90": "90°",
+    "playerScale": "Player size",
+    "ballScale": "Ball size",
+    "labelMode": "Label",
+    "courtTheme": "Court theme",
+    "strokeColor": "Stroke color",
+    "strokeWidth": "Stroke width",
+    "export": "Export",
+    "pdfPerFrame": "One page per frame",
+    "keepAwake": "Keep screen awake"
+  },
+  "labelModes": {
+    "number": "Number",
+    "name": "Name",
+    "position": "Position",
+    "none": "None"
+  },
+  "themes": {
+    "blue": "Blue",
+    "green": "Green",
+    "wood": "Wood",
+    "neutral": "Neutral"
+  },
+  "line": {
+    "dashLabel": "Pattern",
+    "shapeLabel": "Shape",
+    "headLabel": "Ends",
+    "dash": {
+      "solid": "Solid",
+      "dashed": "Dashed",
+      "dotted": "Dotted",
+      "dashdot": "Dash-dot"
+    },
+    "shape": { "straight": "Straight", "curve": "Curve" },
+    "head": { "none": "No end", "arrow": "Arrow" }
+  },
+  "frames": {
+    "title": "Frames",
+    "add": "Add frame",
+    "duplicate": "Duplicate frame",
+    "delete": "Delete frame",
+    "moveLeft": "Move left",
+    "moveRight": "Move right",
+    "copyStrokes": "Copy strokes",
+    "duration": "Duration (ms)",
+    "previous": "Previous frame",
+    "next": "Next frame"
+  },
+  "playback": {
+    "play": "Play",
+    "pause": "Pause",
+    "stop": "Stop",
+    "speed": "Speed",
+    "loop": "Loop",
+    "ghost": "Previous frame",
+    "frame": "Frame"
+  },
+  "rotation": {
+    "title": "Rotation",
+    "system": "System",
+    "rotation": "Rotation",
+    "next": "Next rotation",
+    "receivers": "Receivers",
+    "applyReceive": "Apply receive",
+    "check": "Check positions"
+  },
+  "share": {
+    "copied": "Link copied to clipboard.",
+    "tooLong": "The link is too long; use the PNG or PDF file instead.",
+    "invalid": "The link is not valid."
+  },
+  "board": {
+    "untitled": "Untitled",
+    "players": "Players",
+    "balls": "Balls",
+    "zoom": "Zoom",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out",
+    "zoomReset": "Reset zoom",
+    "hint": "Drag the pieces. Use two fingers to zoom and pan.",
+    "empty": "Add players or balls to get started."
+  },
+  "piece": {
+    "label": "Label",
+    "color": "Color",
+    "remove": "Remove piece"
+  },
+  "confirm": {
+    "clearTitle": "Clear the board",
+    "clearMessage": "All pieces and strokes will be removed. You can undo this.",
+    "yes": "Clear",
+    "no": "Cancel"
+  },
+  "a11y": {
+    "board": "Volleyball tactics board",
+    "toolbar": "Toolbar",
+    "selected": "selected"
+  },
+  "pwa": {
+    "updateAvailable": "A new version is available.",
+    "update": "Update",
+    "later": "Later"
+  },
+  "limits": {
+    "players": "Maximum of 20 players reached.",
+    "balls": "Maximum of 5 balls reached."
+  },
+  "nav": {
+    "board": "Board",
+    "library": "Library",
+    "teams": "Teams"
+  },
+  "mobile": {
+    "drawing": "Drawing",
+    "animation": "Animation"
+  },
+  "common": {
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "save": "Save",
+    "close": "Close",
+    "back": "Back"
+  },
+  "boardTitle": {
+    "label": "Title",
+    "placeholder": "Untitled"
+  },
+  "teams": {
+    "title": "Teams",
+    "empty": "No teams yet.",
+    "new": "New team",
+    "name": "Name",
+    "color": "Color",
+    "players": "Players",
+    "addPlayer": "Add player",
+    "removePlayer": "Remove player",
+    "playerName": "Name",
+    "number": "Number",
+    "position": "Position",
+    "load": "Load onto board",
+    "delete": "Delete team",
+    "duplicate": "Duplicate",
+    "save": "Save",
+    "duplicateNumber": "There are duplicate numbers in the team.",
+    "confirmDelete": "The team will be deleted. This cannot be undone.",
+    "pickTitle": "Load team",
+    "pickHint": "Pick a team to place starters in the rotation and the rest on the bench.",
+    "maxPlayers": "Maximum of 20 players."
+  },
+  "library": {
+    "title": "Library",
+    "empty": "No saved tactics yet.",
+    "newBoard": "New tactic",
+    "search": "Search by title",
+    "sort": "Sort",
+    "sortName": "Name",
+    "sortDate": "Date",
+    "folders": "Folders",
+    "newFolder": "New folder",
+    "untitled": "Untitled",
+    "rename": "Rename",
+    "duplicate": "Duplicate",
+    "delete": "Delete",
+    "confirmDelete": "The tactic will be deleted. This cannot be undone.",
+    "moveTo": "Move to",
+    "all": "All",
+    "root": "Root",
+    "folderDepthLimit": "Folders can be nested up to 3 levels.",
+    "backupExport": "Export backup",
+    "backupImport": "Import backup",
+    "importTitle": "Import backup",
+    "importSummary": "{{boards}} tactics, {{teams}} teams and {{folders}} folders will be added ({{renamed}} with a new id due to conflicts).",
+    "importConfirm": "Import",
+    "importDone": "Backup imported."
+  }
+}
