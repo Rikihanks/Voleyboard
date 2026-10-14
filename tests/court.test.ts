@@ -12,6 +12,7 @@ import {
   panToKeepPoint,
   pieceDiameterPixels,
   quadraticBezier,
+  simplifyPath,
   strokePolyline,
   rectContains,
   scaleForView,
@@ -159,6 +160,35 @@ describe('curvas', () => {
     ]
     expect(strokePolyline(points, 'straight')).toHaveLength(3)
     expect(strokePolyline(points, 'curve').length).toBeGreaterThan(3)
+  })
+})
+
+describe('simplifyPath', () => {
+  it('colapsa una linea casi recta a sus extremos', () => {
+    const points = Array.from({ length: 20 }, (_, i) => ({ x: i, y: i * 0.001 }))
+    expect(simplifyPath(points, 0.05)).toEqual([
+      { x: 0, y: 0 },
+      { x: 19, y: 0.019 },
+    ])
+  })
+
+  it('conserva los vertices de un zigzag', () => {
+    const points = [
+      { x: 0, y: 0 },
+      { x: 1, y: 3 },
+      { x: 2, y: 0 },
+      { x: 3, y: 3 },
+      { x: 4, y: 0 },
+    ]
+    expect(simplifyPath(points, 0.1)).toHaveLength(5)
+  })
+
+  it('no toca polilineas de menos de 3 puntos', () => {
+    const points = [
+      { x: 0, y: 0 },
+      { x: 1, y: 1 },
+    ]
+    expect(simplifyPath(points, 0.1)).toBe(points)
   })
 })
 

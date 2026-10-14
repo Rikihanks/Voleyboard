@@ -268,3 +268,34 @@ export function strokePolyline(points: Vec[], shape: 'straight' | 'curve'): Vec[
 export function curveControlPoint(points: Vec[]): Vec | null {
   return points.length >= 3 ? (points[1] as Vec) : null
 }
+
+/**
+ * Simplifica una polilinea con Ramer-Douglas-Peucker: descarta los puntos que
+ * se apartan menos de `epsilon` de la recta entre los extremos del tramo.
+ */
+export function simplifyPath(points: Vec[], epsilon: number): Vec[] {
+  if (points.length < 3 || epsilon <= 0) return points
+  const keep = new Array<boolean>(points.length).fill(false)
+  keep[0] = true
+  keep[points.length - 1] = true
+  const stack: Array<[number, number]> = [[0, points.length - 1]]
+  while (stack.length > 0) {
+    const [start, end] = stack.pop() as [number, number]
+    let maxDistance = -1
+    let index = -1
+    const a = points[start] as Vec
+    const b = points[end] as Vec
+    for (let i = start + 1; i < end; i += 1) {
+      const d = distancePointToSegment(points[i] as Vec, a, b)
+      if (d > maxDistance) {
+        maxDistance = d
+        index = i
+      }
+    }
+    if (maxDistance > epsilon && index !== -1) {
+      keep[index] = true
+      stack.push([start, index], [index, end])
+    }
+  }
+  return points.filter((_, i) => keep[i])
+}
