@@ -49,5 +49,11 @@ test('layout compacto en movil', async ({ page }) => {
   await toolbar.getByRole('button', { name: 'Añadir fotograma' }).click()
   await expect(toolbar.getByRole('button', { name: 'Fotograma anterior' })).toBeEnabled()
 
+  // En movil la orientacion por defecto es vertical (0 grados).
+  await toolbar.getByRole('button', { name: 'Más opciones' }).click()
+  const sheet2 = page.getByRole('dialog', { name: 'Más opciones' })
+  await sheet2.getByRole('button', { name: 'Ajustes' }).click()
+  await expect(page.getByTestId('rotation-0')).toHaveAttribute('aria-pressed', 'true')
+
   expect(errors).toEqual([])
 })

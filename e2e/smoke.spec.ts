@@ -77,5 +77,9 @@ test('pizarra basica: anadir, arrastrar, dibujar, deshacer y exportar', async ({
   ]).then(([value]) => value)) as import('@playwright/test').Download
   expect(pdfDownload.suggestedFilename()).toMatch(/-\d{8}\.pdf$/)
 
+  // En pantalla grande la orientacion por defecto es horizontal (90 grados).
+  await page.getByRole('button', { name: 'Ajustes' }).click()
+  await expect(page.getByTestId('rotation-90')).toHaveAttribute('aria-pressed', 'true')
+
   expect(errors).toEqual([])
 })

@@ -28,6 +28,7 @@ import { courtColors } from './courtTheme'
 import { CourtLayer } from './CourtLayer'
 import { EntityLayer } from './EntityLayer'
 import { StrokesLayer } from './StrokesLayer'
+import { useEffectiveRotation } from './useEffectiveRotation'
 import { useViewport } from './useViewport'
 
 /** Separacion minima entre muestras del lapiz, en metros. */
@@ -59,7 +60,7 @@ export function BoardCanvas({ stageRef }: BoardCanvasProps) {
   const playing = usePlaybackStore((s) => s.playing)
   const playbackTime = usePlaybackStore((s) => s.time)
   const checking = useRotationStore((s) => s.checking)
-  const rotation = useSettingsStore((s) => s.rotation)
+  const rotation = useEffectiveRotation()
   const { containerRef, size, viewport, zoom, zoomBy, panBy, resetView } = useViewport(
     board.view,
     rotation,

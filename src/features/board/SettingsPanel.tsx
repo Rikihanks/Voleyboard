@@ -7,6 +7,8 @@ import { useSettingsStore, type Language, type Theme } from '@/state/settingsSto
 import { Icon } from '@/ui/Icon'
 import { IconButton } from '@/ui/IconButton'
 
+import { useEffectiveRotation } from './useEffectiveRotation'
+
 interface SettingsPanelProps {
   open: boolean
   onClose: () => void
@@ -25,7 +27,7 @@ export function SettingsPanel({ open, onClose }: SettingsPanelProps) {
   const setLanguage = useSettingsStore((s) => s.setLanguage)
   const theme = useSettingsStore((s) => s.theme)
   const setTheme = useSettingsStore((s) => s.setTheme)
-  const rotation = useSettingsStore((s) => s.rotation)
+  const rotation = useEffectiveRotation()
   const setRotation = useSettingsStore((s) => s.setRotation)
   const strokeColor = useSettingsStore((s) => s.strokeColor)
   const setStrokeColor = useSettingsStore((s) => s.setStrokeColor)
@@ -90,6 +92,7 @@ export function SettingsPanel({ open, onClose }: SettingsPanelProps) {
             <button
               key={entry}
               type="button"
+              data-testid={`rotation-${entry}`}
               className={`segmented${rotation === entry ? ' is-active' : ''}`}
               aria-pressed={rotation === entry}
               onClick={() => setRotation(entry)}

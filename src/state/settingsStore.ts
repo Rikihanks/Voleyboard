@@ -11,6 +11,8 @@ interface SettingsStore {
   theme: Theme
   /** Rotacion de la vista de pista: 0 o 90 grados. */
   rotation: 0 | 90
+  /** Si la rotacion se elige segun el tamano de pantalla (90 en grande). */
+  rotationAuto: boolean
   strokeColor: string
   /** Grosor del trazo en metros. */
   strokeWidth: number
@@ -27,6 +29,7 @@ interface SettingsStore {
   toggleTheme: () => void
   setRotation: (rotation: 0 | 90) => void
   toggleRotation: () => void
+  setRotationAuto: (value: boolean) => void
   setStrokeColor: (color: string) => void
   setStrokeWidth: (width: number) => void
   setLineDash: (dash: DashPattern) => void
@@ -50,12 +53,21 @@ function detectTheme(): Theme {
   return 'light'
 }
 
+/** Orientacion por defecto: horizontal en pantallas grandes, vertical en movil. */
+function detectRotation(): 0 | 90 {
+  if (typeof window !== 'undefined' && window.matchMedia) {
+    return window.matchMedia('(min-width: 721px)').matches ? 90 : 0
+  }
+  return 0
+}
+
 export const useSettingsStore = create<SettingsStore>()(
   persist(
     (set) => ({
       language: detectLanguage(),
       theme: detectTheme(),
-      rotation: 0,
+      rotation: detectRotation(),
+      rotationAuto: true,
       strokeColor: '#f8fafc',
       strokeWidth: 0.15,
       lineDash: 'solid',
@@ -66,8 +78,13 @@ export const useSettingsStore = create<SettingsStore>()(
       setLanguage: (language) => set({ language }),
       setTheme: (theme) => set({ theme }),
       toggleTheme: () => set((s) => ({ theme: s.theme === 'dark' ? 'light' : 'dark' })),
-      setRotation: (rotation) => set({ rotation }),
-      toggleRotation: () => set((s) => ({ rotation: s.rotation === 90 ? 0 : 90 })),
+      setRotation: (rotation) => set({ rotation, rotationAuto: false }),
+      toggleRotation: () =>
+        set((s) => ({
+          rotation: s.rotation === 90 ? 0 : 90,
+          rotationAuto: false,
+        })),
+      setRotationAuto: (rotationAuto) => set({ rotationAuto }),
       setStrokeColor: (strokeColor) => set({ strokeColor }),
       setStrokeWidth: (strokeWidth) => set({ strokeWidth }),
       setLineDash: (lineDash) => set({ lineDash }),
